@@ -1,7 +1,7 @@
 <?php
 	include('path.php');
 	include(ROOT_PATH.'/app/db.php');
-	include(ROOT_PATH.'/app/download.php');
+	include(ROOT_PATH.'/app/download-u.php');
 	$path = 'assets/imgs';
 	$userFiles = glob($path."/{*.jpg,*.jpeg,*.png,*.PNG}",GLOB_BRACE|GLOB_NOSORT);
 	// print_r($userFiles);
@@ -26,7 +26,7 @@
 	<!-- Main -->
 	<div class="main w-11/12 md:5/6 container bg-purple-400 mx-auto my-8 flex flex-row flex-wrap justify-center items-center">
 		<?php foreach ($userFiles as $userFile): ?>
-			<img class="my-4" src="<?php echo($userFile);?>" alt="...">
+			<img class="to-show my-4" src="<?php echo($userFile);?>" alt="...">
 		<?php endforeach ?>
 	</div>
 
